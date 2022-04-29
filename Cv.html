@@ -50,23 +50,23 @@
                 </div>
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                     <div class="flex-shrink-0 flex items-center">
-                        <h2 class="text-2xl text-gray-300">Steven Delval</h2>
+                        <h2 class="text-2xl text-white">Steven Delval</h2>
                     </div>
                     <div class="hidden sm:block sm:ml-6">
                         <div class="flex space-x-4">
-                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-white hover:bg-gray-700 hover:text-white" -->
                             <a href="#aPropos"
                                 class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
                                 aria-current="page">à propos</a>
 
                             <a href="#competences"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Compétences</a>
+                                class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Compétences</a>
 
                             <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Parcours</a>
+                                class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Parcours</a>
 
                             <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Contact</a>
+                                class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -77,20 +77,20 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
+        <div class="hidden sm:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <!-- Current: "bg-gray-900 text-white", Default: "text-white hover:bg-gray-700 hover:text-white" -->
                 <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium uppercase"
                     aria-current="page">à propos</a>
 
                 <a href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">Compétences</a>
+                    class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">Compétences</a>
 
                 <a href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">Parcours</a>
+                    class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">Parcours</a>
 
                 <a href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">Contact</a>
+                    class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">Contact</a>
             </div>
         </div>
     </nav>
@@ -129,7 +129,7 @@
         <div class="relative w-1/2 mx-auto py-24 px-4 sm:py-32 sm:px-6  lg:px-8">
             <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Bonjour, je m'appelle
                 Steven Delval !</h1>
-            <p class="mt-6 text-xl text-indigo-100 max-w-3xl">Je suis un jeune développeur intégrateur web. Je
+            <p class="mt-6 text-xl text-white max-w-3xl">Je suis un jeune développeur intégrateur web. Je
                 souhaiterai me former dans
                 le
                 développement d'Intelligence
@@ -148,16 +148,25 @@
             doloremque id vitae distinctio atque illum, perspiciatis sit veniam! Aliquam quae magni officia maxime!</p>
     </section>
 
-    <section id="competences" class="h-screen bg-black-gray ">
-        <h2 class="text-white text-4xl">Compétences</h2>
-        <div class="grid grid-cols-3">
-            <i class="fa-brands fa-html5 text-6xl text-orange-600"></i>
-            <i class="fa-brands fa-css3-alt text-6xl text-indigo-600"></i>
-            <i class="fa-brands fa-js text-6xl text-amber-400"></i>
-            <i class="fa-brands fa-python text-6xl text-indigo-600 "></i>
-            <i class="fa-solid fa-database text-6xl text-orange-700"></i>
-            <i class="fa-brands fa-git-alt text-6xl text-red-500"></i>
+    <section id="competences" class="min-h-screen bg-black-gray w-full flex flex-col items-center gap-10">
+        <h2 class="text-white text-4xl mt-16">Compétences</h2>
+        <div class="flex flex-col sm:grid sm:grid-cols-3 mt-10 w-1/2 text-center gap-y-9">
+            <i class="fa-brands fa-html5 text-8xl text-orange-600"></i>
+            <i class="fa-brands fa-css3-alt text-8xl text-indigo-600"></i>
+            <i class="fa-brands fa-js text-8xl text-amber-400"></i>
+            <i class="fa-brands fa-python text-8xl text-indigo-600 "></i>
+            <i class="fa-solid fa-database text-8xl text-orange-700"></i>
+            <i class="fa-brands fa-git-alt text-8xl text-red-500"></i>
         </div>
+        <article class="flex flex-col items-center gap-10">
+            <h2 class="text-white text-4xl ">Soft skills</h2>
+            <ul class="flex flex-col sm:grid sm:grid-cols-2 text-center text-white text-3xl gap-3">
+                <li>Sens de l’adaptation et de l’organisation</li>
+                <li>Curiosité</li>
+                <li>Rigoureux</li>
+                <li>Persévérance</li>
+            </ul>
+        </article>
     </section>
 
 
