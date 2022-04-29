@@ -13,7 +13,7 @@
 <body class="flex flex-col justify-center items-center bg-black-gray min-h-screen">
 
 
-    <nav class="bg-red-perso w-full">
+    <nav class="bg-red-perso w-full fixed top-0 z-50">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -50,7 +50,7 @@
                 </div>
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                     <div class="flex-shrink-0 flex items-center">
-                        <h2>Steven Delval</h2>
+                        <h2 class="text-2xl text-gray-300">Steven Delval</h2>
                     </div>
                     <div class="hidden sm:block sm:ml-6">
                         <div class="flex space-x-4">
@@ -99,18 +99,19 @@
 
     <aside class="fixed top-1/2 -translate-y-2/4 right-0 z-10">
         <ul class=" flex flex-col gap-5">
-            <li class="rounded-l-lg pl-2 bg-white translate-x-32 hover:translate-x-0"> <a
-                    class="flex gap-2 items-center text-3xl" href="mailto:asteven59220@free.fr"><i
-                        class="fa-solid fa-envelope"></i><span>Mon
+            <li class="rounded-l-lg pl-2 bg-white translate-x-28 hover:translate-x-0 h-14 w-40 flex items-center"> <a
+                    class="flex gap-2 items-center justify-between text-3xl w-full"
+                    href="mailto:asteven59220@free.fr"><i class="fa-solid fa-envelope"></i><span class="text-2xl">Mon
                         mail</span></a></li>
-            <li class="rounded-l-lg pl-2 bg-white translate-x-32 hover:translate-x-0"><a
-                    class="flex gap-2 items-center text-3xl" href="https://github.com/StevenDsimplon" target="_blank"><i
-                        class="fa-brands fa-github"></i>
-                    <span>Github</span></a>
+            <li class="rounded-l-lg pl-2 bg-white translate-x-28 hover:translate-x-0 h-14 w-40 flex items-center "><a
+                    class="flex gap-2 items-center justify-between text-3xl w-full"
+                    href="https://github.com/StevenDsimplon" target="_blank"><i class="fa-brands fa-github"></i>
+                    <span class="text-2xl">Github</span></a>
             </li>
-            <li class="rounded-l-lg pl-2 bg-blue-600 translate-x-32 hover:translate-x-0"><a
-                    class="flex gap-2 items-center text-3xl" href="https://www.linkedin.com/in/steven-delval-a60312234/"
-                    target="_blank"><i class="fa-brands fa-linkedin-in"></i><span>Linkedin</span></a></li>
+            <li class="rounded-l-lg pl-2 bg-linkedin translate-x-28 hover:translate-x-0 h-14 w-40 flex items-center "><a
+                    class="flex gap-2 items-center text-3xl justify-between w-full text-white"
+                    href="https://www.linkedin.com/in/steven-delval-a60312234/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i><span class="text-2xl">Linkedin</span></a></li>
         </ul>
 
     </aside>
@@ -119,14 +120,12 @@
 
 
 
-    <div class="relative w-full bg-indigo-800 h-screen">
+    <section class="relative w-full h-screen flex justify-center items-center">
         <div class="absolute inset-0">
-            <img class="w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
-                alt="">
-            <div class="absolute inset-0 bg-black-gray mix-blend-multiply" aria-hidden="true"></div>
+            <img class="w-full h-full object-cover" src="img/code.png" alt="">
+            <div class="absolute inset-0 bg-gray-800 mix-blend-multiply" aria-hidden="true"></div>
         </div>
-        <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+        <div class="relative w-1/2 mx-auto py-24 px-4 sm:py-32 sm:px-6  lg:px-8">
             <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Bonjour, je m'appelle
                 Steven Delval !</h1>
             <p class="mt-6 text-xl text-indigo-100 max-w-3xl">Je suis un jeune développeur intégrateur web. Je
@@ -135,7 +134,7 @@
                 développement d'Intelligence
                 Artificiel.</p>
         </div>
-    </div>
+    </section>
 
     <button class="fixed bottom-2 left-2 text-sm bg-white rounded-md p-1 z-40">Télécharger mon Cv</button>
 
