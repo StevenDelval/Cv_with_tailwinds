@@ -50,7 +50,7 @@
                 </div>
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                     <div class="flex-shrink-0 flex items-center">
-                        <h2 class="text-2xl text-white">Steven Delval</h2>
+                        <h2 class="text-xl text-white">Steven Delval</h2>
                     </div>
                     <div class="hidden sm:block sm:ml-6">
                         <div class="flex space-x-4">
@@ -62,7 +62,7 @@
                             <a href="#competences"
                                 class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Compétences</a>
 
-                            <a href="#"
+                            <a href="#parcours"
                                 class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Parcours</a>
 
                             <a href="#"
@@ -83,10 +83,10 @@
                 <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium uppercase"
                     aria-current="page">à propos</a>
 
-                <a href="#"
+                <a href="#competences"
                     class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">Compétences</a>
 
-                <a href="#"
+                <a href="#parcours"
                     class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">Parcours</a>
 
                 <a href="#"
@@ -121,7 +121,7 @@
 
 
 
-    <section id="presatation" class="relative w-full h-screen flex justify-center items-center z-20">
+    <section id="presatation" class="relative w-full min-h-screen flex justify-center items-center z-20">
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover" src="img/code.png" alt="">
             <div class="absolute inset-0 bg-gray-800 mix-blend-multiply" aria-hidden="true"></div>
@@ -137,13 +137,16 @@
         </div>
     </section>
 
-    <button class="fixed bottom-2 left-2 text-sm bg-white rounded-md p-1 z-40">Télécharger mon Cv</button>
+    <button class="fixed bottom-2 left-2 text-sm bg-white rounded-md p-1 z-50">Télécharger mon Cv</button>
 
-    <button class="fixed bottom-2 right-2 flex justify-center items-center text-xl w-8 h-8 bg-white rounded-full p-1 z-10" ><i class="fa-solid fa-arrow-up"></i></button>
+    <button
+        class="fixed bottom-2 right-2 flex justify-center items-center text-xl w-8 h-8 bg-white rounded-full p-1 z-50"><i
+            class="fa-solid fa-arrow-up"></i></button>
 
     <section id="aPropos" class="flex flex-col items-center w-full h-screen justify-center bg-white ">
         <h2 class=" first-letter:uppercase mb-5 text-4xl">à propos</h2>
-        <p class=" text-xl text-justify text-black max-w-3xl bg-white z-40">Je suis un jeune développeur intégrateur web. Je
+        <p class=" text-xl text-justify text-black max-w-3xl bg-white z-40">Je suis un jeune développeur intégrateur
+            web. Je
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolor at. Accusamus dolore velit error at
             doloremque id vitae distinctio atque illum, perspiciatis sit veniam! Aliquam quae magni officia maxime!</p>
     </section>
@@ -158,9 +161,10 @@
             <i class="fa-solid fa-database text-8xl text-orange-700"></i>
             <i class="fa-brands fa-git-alt text-8xl text-red-500"></i>
         </div>
-        <article class="flex flex-col items-center gap-10">
+        <article
+            class="flex flex-col items-center gap-10 bg-black-gray z-40 w-full sm:z-0 sm:bg-transparent sm:w-auto ">
             <h2 class="text-white text-4xl ">Soft skills</h2>
-            <ul class="flex flex-col sm:grid sm:grid-cols-2 text-center text-white text-3xl gap-3">
+            <ul class="flex flex-col sm:grid sm:grid-cols-2 text-center text-white text-3xl gap-3 mb-3">
                 <li>Sens de l’adaptation et de l’organisation</li>
                 <li>Curiosité</li>
                 <li>Rigoureux</li>
@@ -169,6 +173,39 @@
         </article>
     </section>
 
+    <section id="parcours" class="min-h-screen bg-white w-full flex flex-col items-center z-40">
+        <h2 class="text-4xl mt-16">Parcours</h2>
+        <article class="flex justify-between w-full px-6">
+            <div>
+                <h2 class="text-center text-3xl mb-6">Formation</h2>
+                <h2 class="text-center text-3xl mb-6 hidden">Experience</h2>
+                <ol role="list" class="overflow-hidden">
+                    <li class="relative pb-10">
+                        <div class="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-gray-300" aria-hidden="true">
+                        </div>
+                        <!-- Upcoming Step -->
+                        <a href="#" class="relative flex items-start group">
+                            <span class="h-9 flex items-center" aria-hidden="true">
+                                <span
+                                    class="relative z-10 w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full ">
+                                    <span
+                                        class="h-2.5 w-2.5 bg-transparent rounded-full "></span>
+                                </span>
+                            </span>
+                            <span class="ml-4 min-w-0 flex flex-col">
+                                <span class="text-xs font-semibold tracking-wide uppercase text-gray-500">Mars 2022 - Avril 2022</span>
+                                <span class="text-sm text-gray-500"><strong>FormationDéveloppeur integrateur web</strong>
+                                    à Simplon Valenciennes</span>
+                            </span>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+
+
+            
+        </article>
+    </section>
 
 </body>
 
