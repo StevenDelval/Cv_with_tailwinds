@@ -11,17 +11,93 @@
 </head>
 
 <body class="flex flex-col justify-center items-center bg-black-gray min-h-screen">
-    <nav class="flex justify-between w-full px-6 fixed top-0 bg-red-perso items-center h-12">
-        <h2 class="text-2xl">Steven DELVAL</h2>
-        <ul class="flex gap-4 text-lg">
-            <li class="uppercase">à propos</li>
-            <li class="uppercase">parcours</li>
-            <li class="uppercase">compétences</li>
-            <li class="uppercase">contact</li>
-        </ul>
+
+
+    <nav class="bg-red-perso w-full">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                  Icon when menu is closed.
+      
+                  Heroicon name: outline/menu
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!--
+                  Icon when menu is open.
+      
+                  Heroicon name: outline/x
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h2>Steven Delval</h2>
+                    </div>
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="#"
+                                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+                                aria-current="page">à propos</a>
+
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Compétences</a>
+
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Parcours</a>
+
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                    aria-current="page">Dashboard</a>
+
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+            </div>
+        </div>
     </nav>
 
-    <aside class="fixed top-1/2 -translate-y-2/4 right-0">
+
+
+    <aside class="fixed top-1/2 -translate-y-2/4 right-0 z-10">
         <ul class=" flex flex-col gap-5">
             <li class="rounded-l-lg pl-2 bg-white translate-x-32 hover:translate-x-0"> <a
                     class="flex gap-2 items-center text-3xl" href="mailto:asteven59220@free.fr"><i
@@ -40,21 +116,28 @@
     </aside>
 
 
-    <section class="flex justify-center items-center h-screen w-1/2 ">
-        <article class="flex flex-col gap-4 text-zinc-50 text-2xl">
-            <h2>Bonjour, je m'appelle Steven Delval !</h2>
-            <p class="text-justify text-xl ">Je suis un jeune développeur intégrateur web. Je souhaiterai me former dans
+
+
+
+    <div class="relative w-full bg-indigo-800 h-screen">
+        <div class="absolute inset-0">
+            <img class="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
+                alt="">
+            <div class="absolute inset-0 bg-black-gray mix-blend-multiply" aria-hidden="true"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Bonjour, je m'appelle
+                Steven Delval !</h1>
+            <p class="mt-6 text-xl text-indigo-100 max-w-3xl">Je suis un jeune développeur intégrateur web. Je
+                souhaiterai me former dans
                 le
                 développement d'Intelligence
                 Artificiel.</p>
-        </article>
-    </section>
+        </div>
+    </div>
 
-
-    <button class="fixed bottom-2 left-2 text-sm bg-white rounded-md p-1">Télécharger mon Cv</button>
-
-
-
+    <button class="fixed bottom-2 left-2 text-sm bg-white rounded-md p-1 z-40">Télécharger mon Cv</button>
 
 </body>
 
