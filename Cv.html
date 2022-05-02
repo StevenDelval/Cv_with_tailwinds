@@ -18,7 +18,7 @@
             <div class="relative flex items-center justify-between h-16">
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                     <!-- Mobile menu button-->
-                    <button type="button"
+                    <button id="menuBurger" type="button"
                         class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                         aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
@@ -53,20 +53,20 @@
                         <h2 class="text-xl text-white">Steven Delval</h2>
                     </div>
                     <div class="hidden sm:block sm:ml-6">
-                        <div class="flex space-x-4">
+                        <div id="navLinks" class="flex space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-white hover:bg-gray-700 hover:text-white" -->
                             <a href="#aPropos"
-                                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
+                                class="text-white px-3 py-2 rounded-md text-sm font-medium uppercase"
                                 aria-current="page">à propos</a>
 
                             <a href="#competences"
-                                class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Compétences</a>
+                                class="text-white  px-3 py-2 rounded-md text-sm font-medium uppercase">Compétences</a>
 
                             <a href="#parcours"
-                                class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Parcours</a>
+                                class="text-white  px-3 py-2 rounded-md text-sm font-medium uppercase">Parcours</a>
 
                             <a href="#contact"
-                                class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium uppercase">Contact</a>
+                                class="text-white  px-3 py-2 rounded-md text-sm font-medium uppercase">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -80,17 +80,17 @@
         <div class="hidden sm:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-white hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium uppercase"
+                <a href="#aPropos" class=" text-white block px-3 py-2 rounded-md text-base font-medium uppercase"
                     aria-current="page">à propos</a>
 
                 <a href="#competences"
-                    class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">Compétences</a>
+                    class="text-white  block px-3 py-2 rounded-md text-base font-medium uppercase">Compétences</a>
 
                 <a href="#parcours"
-                    class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">Parcours</a>
+                    class="text-white  block px-3 py-2 rounded-md text-base font-medium uppercase">Parcours</a>
 
                 <a href="#contact"
-                    class="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium uppercase">Contact</a>
+                    class="text-white  block px-3 py-2 rounded-md text-base font-medium uppercase">Contact</a>
             </div>
         </div>
     </nav>
@@ -98,7 +98,7 @@
 
 
     <aside class="fixed top-1/2 -translate-y-2/4 right-0 z-30">
-        <ul class=" flex flex-col gap-5">
+        <ul class="hidden sm:flex flex-col gap-5">
             <li class="rounded-l-lg pl-2 bg-white translate-x-28 hover:translate-x-0 h-14 w-40 flex items-center"> <a
                     class="flex gap-2 items-center justify-between text-3xl w-full"
                     href="mailto:asteven59220@free.fr"><i class="fa-solid fa-envelope"></i><span
@@ -137,15 +137,16 @@
         </div>
     </section>
 
-    <button class="fixed bottom-2 left-2 text-sm bg-white rounded-md p-1 z-50">Télécharger mon Cv</button>
+    <button class="fixed bottom-2 left-2 text-sm border border-black bg-white rounded-md p-1 z-50">Télécharger mon
+        Cv</button>
 
-    <button
-        class="fixed bottom-2 right-2 flex justify-center items-center text-xl w-8 h-8 bg-white rounded-full p-1 z-50"><i
+    <button id="btn-up"
+        class="fixed bottom-2 right-2 flex justify-center items-center border border-black text-xl w-8 h-8 bg-white rounded-full p-1 z-50"><i
             class="fa-solid fa-arrow-up"></i></button>
 
-    <section id="aPropos" class="flex flex-col items-center w-full h-screen justify-center bg-white ">
+    <section id="aPropos" class="flex flex-col items-center w-full min-h-screen justify-center bg-white ">
         <h2 class=" first-letter:uppercase mb-5 text-4xl">à propos</h2>
-        <p class=" text-xl text-justify text-black max-w-3xl bg-white z-40">Je suis un jeune développeur intégrateur
+        <p class=" text-xl text-justify text-black max-w-3xl bg-white z-40 p-3">Je suis un jeune développeur intégrateur
             web. Je
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolor at. Accusamus dolore velit error at
             doloremque id vitae distinctio atque illum, perspiciatis sit veniam! Aliquam quae magni officia maxime!</p>
@@ -175,7 +176,7 @@
 
     <section id="parcours" class="min-h-screen bg-white w-full flex flex-col items-center z-40">
         <h2 class="text-4xl mt-16">Parcours</h2>
-        <article class="flex flex-col justify-between w-full px-10 sm:flex-row">
+        <article class="flex flex-col justify-between w-full px-10 gap-3 sm:flex-row">
             <div>
                 <h2 class="text-center text-3xl mb-6">Formations</h2>
                 <ol role="list" class="overflow-hidden">
@@ -248,8 +249,8 @@
                             </span>
                         </section>
                     </li>
-                    
-                    
+
+
                     <li class="relative pb-10">
                         <div class="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-red-900" aria-hidden="true">
                         </div>
@@ -270,8 +271,8 @@
                             </span>
                         </section>
                     </li>
-                    
-                    
+
+
                     <li class="relative pb-10">
                         <div class="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-red-900" aria-hidden="true">
                         </div>
@@ -292,10 +293,10 @@
                             </span>
                         </section>
                     </li>
-                    
-                    
+
+
                     <li class="relative pb-10">
-                        
+
                         <!-- Upcoming Step -->
                         <section class="relative flex items-start group">
                             <span class="h-9 flex items-center" aria-hidden="true">
@@ -315,10 +316,10 @@
 
                 </ol>
             </div>
-            
-            
+
+
             <div>
-                
+
                 <h2 class="text-center text-3xl mb-6 ">Experiences</h2>
                 <ol role="list" class="overflow-hidden">
                     <li class="relative pb-10">
@@ -333,19 +334,22 @@
                                 </span>
                             </span>
                             <span class="ml-4 min-w-0 flex flex-col">
-                                <span class="text-xs font-semibold tracking-wide uppercase ">octobre 2021 - février 2022</span>
-                                <span class="text-sm "><strong class="block">Service civique au Pôle emploi de Denain</strong>
+                                <span class="text-xs font-semibold tracking-wide uppercase ">octobre 2021 - février
+                                    2022</span>
+                                <span class="text-sm "><strong class="block">Service civique au Pôle emploi de
+                                        Denain</strong>
                                     <ul class="pl-4">
                                         <li>Accompagner les usagers dans l'utilisation des outils numériques</li>
                                         <li>Aide à la création et mise à jour de CV en ligne.</li>
                                         <li>Conseils et accompagnement sur la recherche d'emploi en ligne.</li>
-                                    </ul></span>
+                                    </ul>
+                                </span>
                             </span>
                         </section>
                     </li>
 
-                    
-                    
+
+
                     <li class="relative pb-10">
                         <div class="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-red-900" aria-hidden="true">
                         </div>
@@ -358,20 +362,21 @@
                                 </span>
                             </span>
                             <span class="ml-4 min-w-0 flex flex-col">
-                                <span class="text-xs font-semibold tracking-wide uppercase ">janvier 2019 - février 2019</span>
+                                <span class="text-xs font-semibold tracking-wide uppercase ">janvier 2019 - février
+                                    2019</span>
                                 <span class="text-sm "><strong class="block">Stage Professeur de Mathématiques</strong>
                                     Collège Victor Hugo SOMAIN</span>
                             </span>
                         </section>
                     </li>
-                    
-                    
-                    
-                   
-                    
-                    
+
+
+
+
+
+
                     <li class="relative pb-10">
-                        
+
                         <!-- Upcoming Step -->
                         <section class="relative flex items-start group">
                             <span class="h-9 flex items-center" aria-hidden="true">
@@ -381,7 +386,8 @@
                                 </span>
                             </span>
                             <span class="ml-4 min-w-0 flex flex-col">
-                                <span class="text-xs font-semibold tracking-wide uppercase ">novembre 2018 - décembre 2018</span>
+                                <span class="text-xs font-semibold tracking-wide uppercase ">novembre 2018 - décembre
+                                    2018</span>
                                 <span class="text-sm "><strong class="block">Stage Professeur de Mathématiques</strong>
                                     Lycée d’excellence Edgar Morin DOUAI</span>
                             </span>
@@ -390,89 +396,58 @@
 
                 </ol>
             </div>
-            
+
         </article>
     </section>
 
     <section id="contact" class="min-h-screen w-full bg-black-gray flex flex-col justify-center items-center z-40">
         <h2 class="text-white text-4xl mt-16 mb-20">Contact</h2>
         <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
-              <div class="w-full flex items-center justify-between p-6 space-x-6">
-                <div class="flex-1 truncate">
-                  <div class="flex items-center space-x-3 justify-center">
-                    <h3 class="text-gray-900 text-3xl font-medium truncate ">Voici mon adresse mail</h3>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              <div>
-                <div class="-mt-px flex divide-x divide-gray-200">
-                  <div class="w-0 flex-1 flex">
-                    <a href="mailto:asteven59220@free.fr" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
-                      
-                      <span class="ml-3 text-3xl text-black"><i class="fa-solid fa-envelope"></i> Email</span>
-                    </a>
-                  </div>
-                  
-                </div>
-              </div>
+            <li class="col-span-1 h-36 w-40 bg-white rounded-lg shadow divide-y divide-gray-200">
+                <a href="mailto:asteven59220@free.fr"
+                class="w-full h-full justify-center items-center flex">
+
+                                <span class="ml-3 text-3xl text-black"><i class="fa-solid fa-envelope"></i> Email</span>
+                            </a>
             </li>
+
+
+            <li class="col-span-1 h-36 w-40 bg-white rounded-lg shadow divide-y divide-gray-200">
+               
+                
+                    <a href="https://github.com/StevenDsimplon" target="_blank"
+                                class="w-full h-full justify-center items-center  flex">
+
+
+                                <span class="text-5xl text-black"><i class="fa-brands fa-github"></i></span>
+                            </a>
+    
+    
+    
+                </li>
+                    
             
-            
-            <li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
-              <div class="w-full flex items-center justify-between p-6 space-x-6">
-                <div class="flex-1 truncate">
-                  <div class="flex items-center space-x-3 justify-center">
-                    <h3 class="text-black font-medium truncate text-3xl ">Voici mon Github</h3>
-                  </div>
-                  
-                </div>
+
+
+
+            <li class=" col-span-1 h-36 w-40 bg-white rounded-lg shadow divide-y divide-gray-200 overflow-hidden mb-10 sm:mb-0">
                 
-              </div>
-              <div>
-                <div class="-mt-px flex divide-x divide-gray-200">
-                  <div class="w-0 flex-1 flex">
-                    <a href="mailto:asteven59220@free.fr" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
-                      
-                      
-                      <span class="ml-3 text-3xl text-black"><i class="fa-brands fa-github"></i></span>
-                    </a>
-                  </div>
-                  
-                </div>
-              </div>
+                <a class=" w-full h-full justify-center items-center  flex bg-linkedin" href="https://www.linkedin.com/in/steven-delval-a60312234/"
+                    target="_blank"
+                   >
+
+
+                    <span class=" text-5xl text-white"><i class="fa-brands fa-linkedin-in"></i></span>
+                </a>
+
+
+
             </li>
-
-
-
-            <li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200 overflow-hidden">
-              <div class="w-full flex items-center justify-between p-6 space-x-6">
-                <div class="flex-1 truncate">
-                  <div class="flex items-center space-x-3 justify-center">
-                    <h3 class="text-black font-medium truncate text-3xl ">Voici mon Linkedin</h3>
-                  </div>
-                  
-                </div>
-                
-              </div>
-              <div>
-                <div class="-mt-px flex divide-x divide-gray-200">
-                  <div class="w-0 flex-1 flex bg-linkedin">
-                    <a href="mailto:asteven59220@free.fr" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
-                      
-                      
-                      <span class="ml-3 text-3xl text-white"><i
-                        class="fa-brands fa-linkedin-in"></i></span>
-                    </a>
-                  </div>
-                  
-                </div>
-              </div>
-            </li>
-          </ul>
+        </ul>
     </section>
+
+
+    <script src="main.js"></script>
 
 </body>
 
